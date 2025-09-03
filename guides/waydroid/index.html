@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Memo, some of them are probably useful.">
+    <meta name="author" content="askpng">
+    <link rel="canonical" href="https://askpng.github.io/memo/guides/waydroid/">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>a nerd's half-hearted guide to Waydroid - memomemomemo</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">memomemomemo</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">guides <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">a nerd's half-hearted guide to Waydroid</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../synced-fgo/">setting up synchronization for fgo core files</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../..">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../synced-fgo/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#a-nerds-half-hearted-guide-to-waydroid">a nerd's half-hearted guide to waydroid</a></li>
+            <li class="second-level"><a href="#installing-waydroid">Installing Waydroid</a></li>
+                
+            <li class="second-level"><a href="#initializing-waydroid">Initializing Waydroid</a></li>
+                
+                <li class="third-level"><a href="#vanilla-variant">VANILLA variant</a></li>
+                <li class="third-level"><a href="#gapps-variant">GAPPS variant</a></li>
+            <li class="second-level"><a href="#using-waydroid_script-to-install-essentials">Using waydroid_script to install essentials</a></li>
+                
+                <li class="third-level"><a href="#libhoudini-andor-libndk">libhoudini and/or libndk</a></li>
+                <li class="third-level"><a href="#gapps-optional-for-vanilla-variant">gapps (optional for VANILLA variant)</a></li>
+                <li class="third-level"><a href="#certify-for-google-play-protect">Certify for Google Play Protect</a></li>
+            <li class="second-level"><a href="#installing-apps">Installing apps</a></li>
+                
+                <li class="third-level"><a href="#installing-apps-using-apk-files">Installing apps using APK files</a></li>
+                <li class="third-level"><a href="#installing-apps-using-xapk-files">Installing apps using XAPK files</a></li>
+            <li class="second-level"><a href="#transferring-files-between-host-waydroid">Transferring files between host &amp; Waydroid</a></li>
+                
+                <li class="third-level"><a href="#kde-connect">KDE Connect</a></li>
+                <li class="third-level"><a href="#adb">ADB</a></li>
+                <li class="third-level"><a href="#shared-storage-directory">Shared storage directory</a></li>
+            <li class="second-level"><a href="#spoofing-device-model">Spoofing device model</a></li>
+                
+            <li class="second-level"><a href="#enabling-software-rendering-for-nvidia">Enabling software rendering for NVIDIA</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="a-nerds-half-hearted-guide-to-waydroid">a nerd's half-hearted guide to waydroid</h1>
+<p>I use Waydroid to run Android app for testing and entertainment purposes.</p>
+<p>My devices are either AMD or Intel, and I run a custom atomic Fedora image. Steps and results may not be 100% replicable on different devices or Linux variants.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Waydroid cannot run with hardware acceleration on NVIDIA GPUs and require software rendering to run.</p>
+</div>
+<h2 id="installing-waydroid">Installing Waydroid</h2>
+<p>If you run Fedora Workstation, run <code>sudo dnf install waydroid</code> and complete the installation. If you run any of the atomic Fefora images, run <code>rpm-ostree install waydroid</code> and reboot once the deployment is completed.</p>
+<p>I also have <code>android-tools</code> installed for ADB and <code>python3-pyclip</code> to sync host-Waydroid clipboard. You can add these packages to your <code>dnf install</code> or <code>rpm-ostree install</code> commands.</p>
+<p>For other distros, refer to complete installation instructions in Waydroid's <a href="https://docs.waydro.id/">official documentation</a>.</p>
+<h2 id="initializing-waydroid">Initializing Waydroid</h2>
+<p>Waydroid has a GUI initialization utility. However, the GUI does not seem to work reliably on atomic Fedora images, so I prefer to use the command line interface. I won't be covering GUI here.</p>
+<p>Now, I will separate this section into two parts: VANILLA and GAPPS. Let's start with VANILLA.</p>
+<h3 id="vanilla-variant">VANILLA variant</h3>
+<p>I prefer to initialize Waydroid using the VANILLA variant which comes without Google apps. I also don't typically use Google or other services inside Waydroid or other emulator-like translation layers in the first place. This is not to say you can't install GAPPS on top of VANILLA! We will address this later.</p>
+<p>My initialization commands are as follows.</p>
+<pre><code># Enable waydroid-container systemd service required for Waydroid to run
+sudo systemctl enable --now waydroid-container.service
+# Initializes Waydroid with the VANILLA variant
+sudo waydroid init -c 'https://ota.waydro.id/system' -v 'https://ota.waydro.id/vendor'
+# Restores security context if SELinux is in use to prevent launch failures
+sudo restorecon -R /var/lib/waydroid
+</code></pre>
+<p>Once done, I run</p>
+<pre><code>waydroid show-full-ui
+</code></pre>
+<p>to start Waydroid... or rather, I launch a permanent <code>.desktop</code> entry that wraps the command, straight from my app drawer.</p>
+<pre><code>[Desktop Entry]
+Type=Application
+Name=Waydroid
+Exec=waydroid show-full-ui
+Categories=X-WayDroid-App;Utility;
+X-Purism-FormFactor=Workstation;Mobile;
+Icon=waydroid
+NoDisplay=false
+</code></pre>
+<p><img alt="Screenshot showing VANILLA Waydroid initialized and launched" src="../assets/initialized-vanilla.webp" /></p>
+<p>Success.</p>
+<p>As you can see, Waydroid time is not in sync with my system time - it defaults to UTC. I always immediately change it to my system time+24H format, disable on-screen keyboard, and disable dark mode.</p>
+<h3 id="gapps-variant">GAPPS variant</h3>
+<p>If you prefer to install the slightly larger GAPPS variant to have Google apps from the very first launch, run the following commands instead.</p>
+<pre><code># Enable waydroid-container systemd service required for Waydroid to run
+sudo systemctl enable --now waydroid-container.service
+# Initializes Waydroid with the VANILLA variant
+sudo waydroid init -s GAPPS -c 'https://ota.waydro.id/system' -v 'https://ota.waydro.id/vendor'
+# Restores security context if SELinux is in use to prevent launch failures
+sudo restorecon -R /var/lib/waydroid
+</code></pre>
+<p>Once done, start Waydroid.</p>
+<pre><code>waydroid show-full-ui
+</code></pre>
+<p>If you have speakers or audio devices turned on, just be aware that doing this might terrorize you with the <strong>Device not Play Protected</strong> notifications right after you start Waydroid. This will continue until you enable <strong>Do Not Disturb</strong> mode on Waydroid, mute Waydroid sounds, mute or turn off your audio devices, or straight-up close Waydroid.</p>
+<p>This will also be addressed soon.</p>
+<p>For the time being, success.</p>
+<p>Notice that this time, Waydroid picks up my system time because Google services is present.</p>
+<h2 id="using-waydroid_script-to-install-essentials">Using waydroid_script to install essentials</h2>
+<p><code>waydroid_script</code> is a git repo that contains installation scripts for additional Waydroid functionalities. For complete information, refer to <a href="https://github.com/casualsnek/waydroid_script">casualsnek/waydroid_script</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This script typically needs to be ran with Waydroid session <em>stopped</em> by running <code>waydroid session stop</code> unless stated otherwise.</p>
+</div>
+<p>You can follow the instructions on the repo, or follow my preferred method.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>My provided commands assume you are using a POSIX-compliant shell like <code>bash</code> or <code>zsh</code>. If you are, like me, using <code>fish</code>, you can use <code>activate.fish</code> instead of <code>.../activate</code>, create a <code>bash</code> script file, or start a <code>bash</code> session instead. I personally collect my scripts within a <a href="https://just.systems/man/en/">.justfile</a> and specify <code>bash</code>.</p>
+</div>
+<pre><code># Clones the waydroid_script git repo as waydroid_script in /tmp
+git clone https://github.com/casualsnek/waydroid_script.git --depth 1 /tmp/waydroid_script
+# Initializes the Python venv to
+python3 -m venv /tmp/waydroid_script/venv
+# Activates the Python venv
+source /tmp/waydroid_script/venv/bin/activate
+# Installs the required Python packages for the installer to run
+sudo /tmp/waydroid_script/venv/bin/pip install -r /tmp/waydroid_script/requirements.txt
+# Launches the installer
+sudo /tmp/waydroid_script/venv/bin/python3 /tmp/waydroid_script/main.py
+# Deactivates the Python venv
+deactivate
+# Removes the waydroid_script folder in /tmp. This will only remove the installer; not remove the items you chose to install
+sudo rm -rf /tmp/waydroid_script ~/.cache/waydroid_script
+</code></pre>
+<p>When prompted for version, select <strong>Android 13</strong>.</p>
+<p>I won't get too much into the details about each options and what they are, but you will most definitely need <code>libhoudini</code> or <code>libndk</code> to run most Android apps. You will also want to certify for Google Play Protect.</p>
+<h3 id="libhoudini-andor-libndk">libhoudini and/or libndk</h3>
+<p><code>libhoudini</code> (Intel CPU) or <code>libndk</code> (AMD CPU) are translation layers for ARM to X86_64 CPUs. You typically only need one of them, matching your CPU, but some apps may require you to have both. I have not personally encountered apps that require both. My recommendation is to install either one of them first and see if your apps run.</p>
+<p>It is also entirely possible that apps don't run with either of them or both of them. Such is life.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step must be ran with no Waydroid session currently running. Stop any running session with <code>waydroid session stop</code>.</p>
+</div>
+<h3 id="gapps-optional-for-vanilla-variant">gapps (optional for VANILLA variant)</h3>
+<p>If you installed the VANILLA variant, you might want to eventually install Google apps and/or services on your Waydroid installation. If you installed the GAPPS variant, you don't need to install it again.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step must be ran with no Waydroid session currently running. Stop any running session with <code>waydroid session stop</code>.</p>
+</div>
+<h3 id="certify-for-google-play-protect">Certify for Google Play Protect</h3>
+<p>If you installed the GAPPS variant, or decide to install <code>gapps</code> using <code>waydroid_script</code> on a VANILLA variant, you will want to complete the certification. This essentially marks your Android installation as "secure" and gets rid of the pesky unprotected notification. Just complete the selection, and the script will provide you with an string of numbers and instructions to navigate to Google's <strong>Device registration</strong> page. Enter the string of numbers and wait for 3-10 minutes, then restart Waydroid.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step must be ran with a running Waydroid session.</p>
+</div>
+<h2 id="installing-apps">Installing apps</h2>
+<p>At this point, you can start installing your apps and start using them. If you prefer getting them directly from the Play Store, or if they are available within F-Droid, you can be on your way and start doing your thing. But if you're like me, and prefer to not use the Play Store, you will need to obtain APK or XAPK files first and then install them.</p>
+<h3 id="installing-apps-using-apk-files">Installing apps using APK files</h3>
+<p>Installing APK files is relatively simple. You can download and save the APK file to your host system and install it using the command line interface, also on your host system. Here's an example.</p>
+<pre><code># Downloads the newest release of X64 Cromite from their GitHub and saves the file as cromite.apk in /tmp/
+curl -L 'https://github.com/uazo/cromite/releases/latest/download/x64_ChromePublic.apk' -o /tmp/cromite.apk
+# Installs cromite.apk to the running Waydroid session
+waydroid app install /tmp/cromite.apk
+# Removes the downloaded cromite.apk in /tmp/
+rm -f /tmp/cromite.apk
+</code></pre>
+<p><img alt="Screenshot of the terminal and Cromite" src="../assets/cromite.webp" /></p>
+<p>Success. We now have Cromite in Waydroid!</p>
+<p>Of course, you can just download files using your host browser the traditional way and then run the <code>waydroid app install /path/to/file.apk</code> command. Whatever works.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Apps that require Accessibility permissions may not fully work when installed in this manner. To circumvent this, follow the XAPK installation method instead.</p>
+</div>
+<h3 id="installing-apps-using-xapk-files">Installing apps using XAPK files</h3>
+<p>XAPK files cannot be installed using the <code>waydroid app install</code> command. I've been using the <strong>APKCombo Installer</strong> app to install my XAPKs. Copy and paste the following commands for your convenience.</p>
+<pre><code>curl -L &quot;https://static.apkflash.com/files/com.apkcombo.app/apkcombo-installer.apk&quot; -o /tmp/apkcombo-installer.apk
+waydroid app install /tmp/apkcombo-installer.apk
+rm -f /tmp/apkcombo-installer.apk
+</code></pre>
+<p><img alt="Screenshot of APKCombo Installer" src="../assets/apkcomboinstaller.webp" /></p>
+<p><strong>APKCombo Installer</strong> will be available in your Waydroid app drawer. Once you give it the required permissions, you can start using it to install XAPK files or APK files that require Accessibility permissions.</p>
+<h2 id="transferring-files-between-host-waydroid">Transferring files between host &amp; Waydroid</h2>
+<p>You most likely are wondering at some point - how do I transfer files from $HOME, then? Waydroid isn't visible in my file explorer, and digging within <code>/var/lib/waydroid</code> also doesn't result in anything relevant, so how exactly...?</p>
+<p>I'll cover some of them here.</p>
+<h3 id="kde-connect">KDE Connect</h3>
+<p>No words needed, honestly. Just install KDE Connect and pair it with your host's KDE Connect, or if you're on GNOME, GSConnect. You can then use it to transfer and receive files.</p>
+<p>I have, however, noticed the pairing breaks every now and then - which is a bummer. But otherwise, KDE Connect is excellent for light file sharing.</p>
+<h3 id="adb">ADB</h3>
+<p>If you are familiar with <code>adb</code>, you most likely are familiar with the <code>push</code> and <code>pull</code> command.</p>
+<p>If you are not, let me enlighten you. <code>adb push</code> is a command that lets you transfer files <em>into</em> Android - or Waydroid in this case. <code>adb pull</code> is the opposite - it transfers files <em>from</em> Android. Here are short examples.</p>
+<ul>
+<li><code>adb push /path/to/directory/or/file/on/host /storage/emulated/0/Download</code></li>
+</ul>
+<p>takes a directory or file from your host PC and places it into Waydroid's default <code>Download</code> folder - the same one you see when you open Files.</p>
+<ul>
+<li><code>adb pull /storage/emulated/0/Android/data/com.developer.appname ~/Documents/com.developer.appname</code></li>
+</ul>
+<p>takes the <code>com.developer.appname/</code> directory from Waydroid, or the app folder for <code>appname</code> that you see inside <strong>Android &gt; data</strong>, and saves it to a folder called <code>com.developer.appname</code> in your PC's Documents folder. Simple enough?</p>
+<p>Admittedly, this method is a bit tedious, especially if you're trying to pull or push multiple files. However, I think this is a decent solution. On the plus side, it often bypasses the need of using rootful file explorers if you simply need to copy small files from <code>Android/data/com.package.appname</code>. Some apps even allow you to push into them.</p>
+<h3 id="shared-storage-directory">Shared storage directory</h3>
+<p>The Waydroid documentation has a page with instructions for <a href="https://docs.waydro.id/faq/setting-up-a-shared-folder">setting up a shared storage directory</a>.</p>
+<p>This is technically the most convenient method, as you are basically linking a folder between your host and Waydroid. It is also probably the most ideal and stress-free, as you do not have to jump through hoops to set everything up. However, I do not personally like this method, as it can be janky and, in my experience, can mess with mounting and your Waydroid install in general.</p>
+<p>The documented instructions are admittedly minimal. Here's an extended version.</p>
+<ol>
+<li>Create the target shared storage directory on your host PC - for example, <code>~/hostcopy</code>.</li>
+<li>Populate <code>~/hostcopy</code> with your desired files. I recommend to have copies of the files you place here <em>outside</em> of <code>~/hostcopy</code>.</li>
+<li>Create the target shared storage directory on Waydroid's Internal shared storage - for example, <code>droidcopy</code>.</li>
+<li>Run the command as documented, with the names adjusted.<blockquote>
+<p><code>sudo mount --bind ~/hostcopy ~/.local/share/waydroid/data/media/0/droidcopy</code></p>
+</blockquote>
+</li>
+<li>Run the <code>ls</code> command to verify. You can also open the <strong>Files</strong> app on Waydroid and check if <code>droidcopy/</code> contains your files.<blockquote>
+<p><code>sudo ls ~/.local/share/waydroid/data/media/0/droidcopy</code></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="spoofing-device-model">Spoofing device model</h2>
+<p>Work in progress</p>
+<h2 id="enabling-software-rendering-for-nvidia">Enabling software rendering for NVIDIA</h2>
+<p>Work in progress</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+    <script src="../../js/open_in_new_tab.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
