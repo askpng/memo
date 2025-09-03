@@ -25,4 +25,4 @@ nav:
   - home: index.md
   - guides:
     - a nerd's half-hearted guide to Waydroid: guides/waydroid.md
-    - synced fgo: synced-fgo.md
+    - setting up synchronization for fgo core files: guides/synced-fgo.md
