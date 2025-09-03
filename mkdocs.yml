@@ -1,1 +1,28 @@
-site_name: My Docs
+# site config
+site_name: memomemomemo
+site_url: https://askpng.github.io/memo
+site_author: askpng
+site_description: Memo, some of them are probably useful.
+# plugins
+plugins:
+  - search
+  # autolinks
+  - autolinks 
+  # awesome-nav
+  # - awesome-nav
+  # open links & pdfs in new tab
+  - open-in-new-tab
+
+theme:
+  name: cinder
+
+# markdown callouts
+markdown_extensions:
+  - callouts
+  - github-callouts
+
+nav:
+  - home: index.md
+  - guides:
+    - a nerd's half-hearted guide to Waydroid: guides/waydroid.md
+    - synced fgo: synced-fgo.md
